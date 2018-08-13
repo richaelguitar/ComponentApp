@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ComponentApp.iml" filepath="$PROJECT_DIR$/ComponentApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basemodule/basemodule.iml" filepath="$PROJECT_DIR$/basemodule/basemodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cartmodule/cartmodule.iml" filepath="$PROJECT_DIR$/cartmodule/cartmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goodsmodule/goodsmodule.iml" filepath="$PROJECT_DIR$/goodsmodule/goodsmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/klibrary/klibrary.iml" filepath="$PROJECT_DIR$/klibrary/klibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mainmodule/mainmodule.iml" filepath="$PROJECT_DIR$/mainmodule/mainmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/routermodule/routermodule.iml" filepath="$PROJECT_DIR$/routermodule/routermodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usermodule/usermodule.iml" filepath="$PROJECT_DIR$/usermodule/usermodule.iml" />
+    </modules>
+  </component>
+</project>
