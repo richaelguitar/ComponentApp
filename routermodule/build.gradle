@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def cfg = rootProject.ext.android
+android {
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":basemodule")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}
+

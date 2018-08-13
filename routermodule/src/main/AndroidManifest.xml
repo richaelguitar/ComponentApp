@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kad.routermodule">
+
+    <application>
+        <provider
+            android:name=".provide.KadContentProvider"
+            android:authorities="com.kad.app.data"
+            android:enabled="true"
+            android:exported="true"></provider>
+    </application>
+
+</manifest>

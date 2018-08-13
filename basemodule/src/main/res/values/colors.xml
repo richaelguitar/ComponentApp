@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--分界线颜色-->
+    <color name="gray_line">#ffdddddd</color>
+    <color name="me_black">#1e1d1d</color>
+    <color name="grayline">#cccccc</color>
+    <color name="gray">#d9d9d9</color>
+    <color name="gray_back">#f0f0f0</color>
+    <color name="white_back">#ffffff</color>
+    <color name="black_text">#333333</color>
+    <color name="b_text">#1E1D1D</color>
+    <color name="blue">#0068cf</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#d9d9d9</color>
+    <color name="blue_dark_text">#2C66AD</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>

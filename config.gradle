@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext{
+
+    android=[
+        compileSdkVersion: 27,
+        minSdkVersion    : 16,
+        targetSdkVersion : 27,
+        buildToolsVersion: "27.0.3",
+        versionCode      : 1,
+        versionName      : "1.0.1"
+    ]
+
+    appId = [
+        "main":"com.kad.mainmodule",
+        "user":"com.kad.usermodule",
+        "cart":"com.kad.cartmodule",
+        "order":"com.kad.ordermodule",
+        "goods":"com.kad.goodsmodule"
+    ]
+
+    supportLibrary = "27.1.1"
+    librarys = [
+            "multidex"     : "com.android.support:multidex:1.0.1",
+            "appcompat-v7" :"com.android.support:appcompat-v7:${supportLibrary}",
+            "constraint-layout":"com.android.support.constraint:constraint-layout:1.1.2",
+            "walle":"com.meituan.android.walle:library:1.1.6"
+
+    ]
+
+}
