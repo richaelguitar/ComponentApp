@@ -7,11 +7,12 @@ import com.kad.routermodule.service.IGoodsService
 import com.kad.routermodule.service.IMainService
 import com.kad.routermodule.service.IUserService
 
-import java.lang.ref.WeakReference
+
 
 class CoreServiceManager private constructor(context: Context) {
 
-    private val contextWeakReference: WeakReference<Context>
+    //由于content是在Application中的onCreate里初始化，所以不担心内存泄漏的问题
+    private var context: Context? = null
 
     private val mainService:IMainService?
     private val cartService:ICartService?
@@ -21,33 +22,33 @@ class CoreServiceManager private constructor(context: Context) {
 
     val iMainService: IMainService
         get() {
-            mainService!!.init(contextWeakReference.get()!!)
+            mainService!!.init(context!!)
             return mainService
         }
 
     val iCartService: ICartService
         get() {
 
-            cartService!!.init(contextWeakReference.get()!!)
+            cartService!!.init(context!!)
             return cartService
         }
 
 
     val iGoodsService: IGoodsService
         get() {
-            goodsService!!.init(contextWeakReference.get()!!)
+            goodsService!!.init(context!!)
             return goodsService
         }
 
 
     val iUserService: IUserService
         get() {
-            userService!!.init(contextWeakReference.get()!!)
+            userService!!.init(context!!)
             return userService
         }
 
     init {
-        this.contextWeakReference = WeakReference(context)
+        this.context = context
         this.mainService  = ReflectUtils.getICoreService(ServicePath.MAIN_PATH.toString()) as IMainService?
         this.cartService = ReflectUtils.getICoreService(ServicePath.CART_PATH.toString()) as ICartService?
         this.goodsService = ReflectUtils.getICoreService(ServicePath.GOODS_PATH.toString()) as IGoodsService?

@@ -66,7 +66,7 @@ class MainActivity : BaseActivity() {
 
 
     fun showHome(){
-        findViewById<RadioButton>(R.id.bottom_home).isChecked = true
+        findViewById<RadioButton>(R.id.bottom_home)!!.isChecked = true
         changeFragmentShow(0)
     }
 
