@@ -42,9 +42,6 @@ android {
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 //正式打包的时候把单独运行的xml文件移除
-                java {
-                    exclude '**/single/**'
-                }
                 kotlin{
                     exclude '**/single/**'
                 }

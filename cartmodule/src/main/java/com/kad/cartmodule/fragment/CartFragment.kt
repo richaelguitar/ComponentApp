@@ -2,11 +2,11 @@ package com.kad.cartmodule.fragment
 
 
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import com.kad.basemodule.BaseLazyLoadFragment
 import com.kad.cartmodule.R
 import com.kad.routermodule.util.CoreServiceManager
+import kotlinx.android.synthetic.main.cart_fragment_layout.*
 
 
 class CartFragment : BaseLazyLoadFragment(){
@@ -16,8 +16,8 @@ class CartFragment : BaseLazyLoadFragment(){
     }
 
     override fun initView(view: View) {
-        val goDetail = view.findViewById<Button>(R.id.btn_go_goods_detail)
-        goDetail!!.setOnClickListener{
+
+        btn_go_goods_detail!!.setOnClickListener{
             CoreServiceManager.instance.iGoodsService.showDetail("123456")
         }
     }
