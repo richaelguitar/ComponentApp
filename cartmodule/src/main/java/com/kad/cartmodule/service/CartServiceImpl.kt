@@ -1,6 +1,5 @@
 package com.kad.cartmodule.service
 
-import android.content.ContentUris
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
