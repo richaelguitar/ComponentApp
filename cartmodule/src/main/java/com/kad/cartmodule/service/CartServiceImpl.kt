@@ -54,9 +54,9 @@ class CartServiceImpl:ICartService{
     }
 
     override fun showCartCount(): Int {
-        var count:Int = 0
-        val cursor:Cursor = mContext!!.contentResolver.query(uri, arrayOf("quantity"),null,null,null)
-        if(cursor!!.count>0){
+        var count = 0
+        val cursor:Cursor = mContext!!.contentResolver!!.query(uri, arrayOf("quantity"),null,null,null)
+        if(cursor.count>0){
             while (cursor.moveToNext()){
                 count+= cursor.getString(cursor.getColumnIndex("quantity")).toInt()
             }

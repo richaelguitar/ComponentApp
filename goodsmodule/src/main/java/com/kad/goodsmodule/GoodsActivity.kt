@@ -41,9 +41,14 @@ class GoodsActivity : BaseActivity() {
 
         btn_show_cart_count.setOnClickListener {
             val quantity:Int = CoreServiceManager.instance.iCartService.showCartCount()
+            var content:String?
             if(quantity>0){
-                Toast.makeText(this,"购物车总数量为："+quantity,Toast.LENGTH_SHORT).show()
+                content="购物车总数量为：".plus(quantity)
+
+            }else{
+                content ="购物车为空！"
             }
+            Toast.makeText(this,content,Toast.LENGTH_SHORT).show()
         }
     }
 

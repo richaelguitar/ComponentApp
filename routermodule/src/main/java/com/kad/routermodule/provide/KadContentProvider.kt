@@ -72,10 +72,8 @@ class KadContentProvider : ContentProvider() {
             else -> {
             }
         }
-        val cursor = db!!.query(uri.path.replace("/",""), projection, selection, selectionArgs, null, null, sortOrder)
-        return if (cursor != null && cursor.count > 0) {
-            cursor
-        } else null
+
+        return  db!!.query(uri.path.replace("/",""), projection, selection, selectionArgs, null, null, sortOrder)
     }
 
     override fun update(uri: Uri, values: ContentValues?, selection: String?,
